@@ -43,7 +43,7 @@ function crearFila(persona)
     var txtId = document.createTextNode(persona.id);
     var txtNombre = document.createTextNode(persona.nombre);
     var txtFechaFinal = document.createTextNode(persona.apellido);
-    var txtLocalidad = document.createTextNode(persona.localidad);
+    var txtLocalidad = document.createTextNode(persona.localidad.nombre);
     var txtTurno = document.createTextNode(persona.sexo);
 
     fila.appendChild(tdId);
@@ -95,11 +95,11 @@ function CrearOpcion(localidad)
     var opciones = $("selectLocalidad");
 
     var opcionLocalidad = document.createElement("option");
-    var idLocalidad = document.createTextNode(opcionLocalidad.id);
+    var idLocalidad = document.createTextNode(localidad.id);
     var valueLocalidad = document.createTextNode(localidad.id);
     var txtLocalidad = document.createTextNode(localidad.nombre);
-    opcionLocalidad.value = txtLocalidad;
-    opcionLocalidad.id = idLocalidad;
+    opcionLocalidad.value = localidad.id;
+    opcionLocalidad.id = localidad.id;
 
     opciones.appendChild(opcionLocalidad);
     opcionLocalidad.appendChild(txtLocalidad);
@@ -179,7 +179,7 @@ function desplegarFormFila(event)
             var nombreInput= $("txtNombre").value;
             var apellidoInput = $("txtApellido").value;
             var sexoInput;
-            var localidadInput = $("selectLocalidad").value;
+            var localidadInput = $("selectLocalidad").textContent;
 
             if($("mujer").checked)
             {
