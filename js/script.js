@@ -95,10 +95,8 @@ function CrearOpcion(localidad)
     var opciones = $("selectLocalidad");
 
     var opcionLocalidad = document.createElement("option");
-    var idLocalidad = document.createTextNode(localidad.id);
-    var valueLocalidad = document.createTextNode(localidad.id);
     var txtLocalidad = document.createTextNode(localidad.nombre);
-    opcionLocalidad.value = localidad.id;
+    opcionLocalidad.value = localidad.nombre;
     opcionLocalidad.id = localidad.id;
 
     opciones.appendChild(opcionLocalidad);
@@ -179,7 +177,7 @@ function desplegarFormFila(event)
             var nombreInput= $("txtNombre").value;
             var apellidoInput = $("txtApellido").value;
             var sexoInput;
-            var localidadInput = $("selectLocalidad").textContent;
+            var localidadInput = $("selectLocalidad").value;
 
             if($("mujer").checked)
             {
