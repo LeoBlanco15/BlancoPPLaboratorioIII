@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pimer parcial labo III</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/script.js"></script>
+</head>
+<body>
+    <div id="divFlex">
+    <div id="divSpinner" class="spinner" hidden></div>
+    <div id="divTabla">
+        <table id="tabla" class="styled-table">
+            <tr id=cabecera> 
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Localidad</th>
+                <th>Sexo</th>
+            </tr>
+        </table>
+    </div>
+
+    <div id="divFormMateria" hidden>
+        <input type="button" value="x" id="btnCerrar" class="button">
+        <br>
+        <label for="txtNombre">Nombre</label>
+        <br>
+        <input type="text" name="txtNombre" id="txtNombre">
+        <br>
+        <label for="txtApellido">Apellido</label>
+        <br>
+        <input type="text" name="txtApellido" id="txtApellido">
+        <br>
+        <label for="dateFechaFinal">Localidad</label>
+        <br>
+        <select name="selectLocalidad" id="selectLocalidad">
+        </select>
+        <br>
+        <form action="/action_page.php">
+        <label for="radioTurno">Sexo</label>
+        <br>
+        <input type="radio" name="sexo" id="hombre" value="Male">
+        <label for="hombre">Hombre</label>
+        <br>
+        <input type="radio" name="sexo" id="mujer" value="Female">
+        <label for="mujer">Mujer</label>
+        <br>
+        </form>
+        <input type="button" value="Modificar" id="btnModificar" class="button">
+    </div>
+
+    </div>
+
+
+
+</body>
+</html>
